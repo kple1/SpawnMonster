@@ -20,7 +20,7 @@ public class SetSpawn implements CommandExecutor{
                 plugin.getConfig().set("spawn.y", player.getLocation().getY());
                 plugin.getConfig().set("spawn.z", player.getLocation().getZ());
                 plugin.saveConfig();
-                player.sendMessage(Color.chat("[!] 스폰 지점을 설정하였습니다"));
+                player.sendMessage(Color.chat("&c[!]&f 스폰 지점을 설정하였습니다"));
             }
         }
         return false;

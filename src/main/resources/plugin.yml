@@ -8,7 +8,7 @@ commands:
   cashItem:
     aliases: "캐시아이템"
   setSpawn:
-    aliases: "스폰설정"
+    aliases: "스폰포인트"
   spawn:
     aliases: "스폰"
   cash:

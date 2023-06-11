@@ -169,7 +169,7 @@ public class CashItemSend {
                         player.sendMessage(design + "즉사가 " + playerName + "님께 전달되었습니다.");
                         targetPlayer.sendMessage(design + "즉사가 " + player.getName() + "으로부터 도착하였습니다");
                         targetPlayer.sendMessage(design + "보낸금액의 70% 700,000캐시도 같이 왔습니다.");
-                        Bukkit.dispatchCommand(console, "캐시 지급 " + targetPlayer.getName() + " " + 70000);
+                        Bukkit.dispatchCommand(console, "캐시 지급 " + targetPlayer.getName() + " " + 700000);
                     }
                 } else {
                     player.sendMessage(design + "손에 아이템을 들고 있지 않거나, 아이템에 displayName이 없습니다.");
