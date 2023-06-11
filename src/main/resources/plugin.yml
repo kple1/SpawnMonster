@@ -1,0 +1,16 @@
+name: SpawnMonster
+version: '1.0.0'
+main: io.spawnmonster.SpawnMonster
+api-version: 1.13
+events:
+  - io.spawnmonster.Listener.KillSpawn
+commands:
+  cashItem:
+    aliases: "캐시아이템"
+  setSpawn:
+    aliases: "스폰설정"
+  spawn:
+    aliases: "스폰"
+  cash:
+    aliases: "캐시"
+
