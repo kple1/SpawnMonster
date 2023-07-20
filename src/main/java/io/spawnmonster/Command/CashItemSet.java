@@ -14,6 +14,9 @@ public class CashItemSet implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player player) {
+            if (!player.isOp()) {
+                return true;
+            }
             Material material = player.getInventory().getItemInMainHand().getType();
             plugin.getConfig().set("설정된 아이템", material.toString());
             plugin.saveConfig();

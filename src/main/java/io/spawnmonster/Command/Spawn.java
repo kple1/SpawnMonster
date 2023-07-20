@@ -16,6 +16,9 @@ public class Spawn implements CommandExecutor {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if (sender instanceof Player player) {
+            if (!player.isOp()) {
+                return true;
+            }
             String worldName = plugin.getConfig().getString("spawn.world");
             double x = plugin.getConfig().getDouble("spawn.x");
             double y = plugin.getConfig().getDouble("spawn.y");
