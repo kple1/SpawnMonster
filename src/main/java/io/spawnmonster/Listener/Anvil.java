@@ -20,11 +20,13 @@ public class Anvil implements Listener {
         if (inventory != null && inventory.getType() == InventoryType.ANVIL) {
             ItemStack clickedItem = event.getCurrentItem();
             String item = plugin.getConfig().getString("설정된 아이템");
-            Material material = Material.matchMaterial(item);
-            player.sendMessage(Color.chat("&c[!] &f해당 아이템은 모루사용이 불가능합니다!"));
+            if (item != null) {
+                Material material = Material.matchMaterial(item);
+                player.sendMessage(Color.chat("&c[!] &f해당 아이템은 모루사용이 불가능합니다!"));
 
-            if (clickedItem != null && clickedItem.getType() == material) {
-                event.setCancelled(true);
+                if (clickedItem != null && clickedItem.getType() == material) {
+                    event.setCancelled(true);
+                }
             }
         }
     }
